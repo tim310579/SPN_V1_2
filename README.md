@@ -30,7 +30,9 @@ Production  - - - - - -模型目錄
 ```
 
 3. `pip3 install -r requirements.txt` (安裝環境套件)
-4. `cd Code-final`
-5. `python3 SPN_Online_Infernece.py ICBEB`
-6. `python3 SPN_Online_Infernece.py PTBXL`
+4. `cd Code-final` 
+5. `python3 SPN_Online_Infernece.py ICBEB` (SPN執行第一個dataset)
+6. `python3 SPN_Online_Infernece.py PTBXL` (SPN執行第二個dataset)
+7. `python3 SPN_V2_Online_Infernece.py ICBEB` (SPN_V2執行第一個dataset)
+8. `python3 SPN_V2_Online_Infernece.py PTBXL` (SPN_V2執行第二個dataset)
 
