@@ -46,6 +46,10 @@ class SPN(nn.Module):
     def forward(self, X):
         
         hidden = self.initHidden(len(X),self.HIDDEN_SIZE)
+        #print(hidden[0].shape)
+        #print(hidden[1].shape)
+        #print(len(X), len(hidden))
+        #print('HHHHASDHADAHDOHO')
         
         min_length = 1000
         max_length = 0
@@ -80,11 +84,17 @@ class SPN(nn.Module):
                     cnn_input = torch.stack(slice_input, dim=0)
 
             cnn_input = cnn_input.cuda()
-
+            #print('cnn_input', cnn_input.shape)
             S_t = self.BaseCNN(cnn_input)
-            
+            #print('S_t1', S_t.shape)
             S_t = S_t.unsqueeze(0)
-            
+            #print('S_t2', S_t.shape)
+            #print(hidden[0].shape)
+            #print(hidden[1].shape)
+            #print(len(X), len(hidden))
+            #print(S_t.shape)
+            #print('HHHHASDHADAHDOHO')
+            #hahahah
             S_t, hidden = self.BaseRNN(S_t,hidden) # Run sequence model
             
             #S_t = hidden[-1]

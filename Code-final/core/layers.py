@@ -122,14 +122,16 @@ class BaseCNN(nn.Module):
         x = self.conv_pad_6_512(x)
         x = self.maxpool_5(x)
 
+        #print(x.shape)
         # *4 for the series length 1000
         # *2 for the series length 500
         x = x.view(-1, 512 * self.fc_size) #Reshape (current_dim, 32*2)
         #print(x.shape)
         x = self.dense1(x)
         #print(x.shape)
+        #print('orogoggigj_XXXXXxxxx', x.shape)
         x= self.dense2(x)
-        
+        #print('orogoggigj_XXXXXxxxx', x.shape) 
         return x
 
 class BaseRNN(nn.Module):

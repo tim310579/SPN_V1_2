@@ -38,8 +38,9 @@ class Config():
 
 
     # path
-    root_dir: str = "../"
-        
+    #root_dir: str = "/home/timchen/SPNV1_2"
+    root_dir: str = "../" 
+
     data_dir: str = "ECG-data"
 
     snippet_dir: str = "snippet"

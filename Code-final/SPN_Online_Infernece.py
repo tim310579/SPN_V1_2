@@ -169,6 +169,10 @@ def execute(config, training_data, training_label, training_index, training_leng
         
     return C,cm,performance,results
 
+os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+
 
 seed = 1
 
@@ -207,6 +211,7 @@ raw_tmp_path = os.path.join(raw_data_config.root_dir,
                             raw_data_config.dataset_name,
                             raw_data_config.tmp_dir)
 
+before_and_after = 1
 
 if(use_dataset_name == "PTBXL"):
     before_and_after = 0.5
@@ -291,13 +296,13 @@ model_path = os.path.join(config.root_dir,
                           config.model_name,
                           config.dataset_name,
                           str(seed))
-
-model = SPN(hidden_size = config.hidden_size, output_size=output_size, fc_size=fc_size)
+print(model_path)
+model = SPN(hidden_size = config.hidden_size, fc_size=fc_size) #,output_size=output_size)
 
 print(model_path)
 
 if use_dataset_name=="PTBXL":
-    print('model19.pt')
+    #print('model19.pt')
     model.load_state_dict(torch.load(model_path+"/model19.pt"))
 else:
     model.load_state_dict(torch.load(model_path+"/best-model.pt"))
@@ -325,25 +330,30 @@ for idx, raw_testing_ecg in enumerate(raw_testing_data):
         
     peaks = ecg.christov_segmenter(signal=tmp_norm[:, 0], sampling_rate = 500)[0]
     
+
     if(len(peaks)<=1):
-        la_peaks = ecg.christov_segmenter(signal=tmp_norm[peaks[0]+500:, 0],
+        la_peaks = ecg.christov_segmenter(signal=tmp_norm[peaks[0]+250:, 0],
                                            sampling_rate = 500)[0]
-        peaks = [(x+500) for x in la_peaks]
+        peaks = [(x+250) for x in la_peaks]
     
     hb = ecg.extract_heartbeats(signal=raw_testing_ecg,
                                 rpeaks=peaks,
                                 sampling_rate=500,
-                                before=1,
-                                after=1)
+                                before=before_and_after,
+                                after=before_and_after)
     
     rpeak_list = hb[1]
     
     raw_testing_ecg_corresponding_label = raw_testing_label[idx]
     
     input_snippet = np.array([hb[0]])
-    
+    #print(input_snippet.shape)
+    #haha
+    #try:
     predictions, t = model(input_snippet)
-        
+    #except:
+    #    continue
+
     end = time.time()
     
     run_time += (end - start)

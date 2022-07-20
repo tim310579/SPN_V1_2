@@ -216,7 +216,7 @@ if __name__ == "__main__":
 
     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 
-    os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+    os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
     use_dataset_name = 'ICBEB'
     ratio_num = 10
@@ -367,7 +367,8 @@ if __name__ == "__main__":
         #snippet generation
         
         input_snippet = np.array([hb[0]])
-        
+        #print(input_snippet.shape)
+        #jaha
         #check the correctness
         '''
         for check_idx in range(rpeak_list.shape[0]):
