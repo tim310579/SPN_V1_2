@@ -7,7 +7,7 @@
 Production  - - - - - -模型目錄
   │
   ├─CNNLSTM  - - - - - -SPN-V2 backbone模型
-  │  │─ICBEB  - 1 - pretrained.pt
+  │  │─ICBEB─1─pretrained.pt
   │  └─PTBXL  - 1 - pretrained.pt
   │
   ├─models  －－－－－－最終模型
