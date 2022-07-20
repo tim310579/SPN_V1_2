@@ -12,10 +12,10 @@ Production  - - - - - -模型目錄
   │  └─PTBXL ─ 1 ─ pretrained.pt
   │
   ├─models  －－－－－－最終模型
-  │  |─KGEVO
+  │  |─KGEVO  - - - - - -SPN-V2 最終模型
   |  |  |─ICBEB ─ 1 ─ model.pkl
   |  |  └─PTBXL ─ 1 ─ model.pkl
-  |  └─SPN_V1
+  |  └─SPN_V1  - - - - - -SPN 最終模型
   |     |─ICBEB ─ 1 ─ best-model.pt
   |     └─PTBXL ─ 1 ─ model19.pt
   │
