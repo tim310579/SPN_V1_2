@@ -1,0 +1,41 @@
+bidict==0.22.0
+biosppy==0.8.0
+brotlipy==0.7.0
+certifi==2021.10.8
+cffi @ file:///home/conda/feedstock_root/build_artifacts/cffi_1625835301720/work
+chardet @ file:///home/conda/feedstock_root/build_artifacts/chardet_1610093487176/work
+charset-normalizer @ file:///home/conda/feedstock_root/build_artifacts/charset-normalizer_1626371162869/work
+cryptography @ file:///home/conda/feedstock_root/build_artifacts/cryptography_1616851478755/work
+cycler==0.10.0
+h5py==3.7.0
+idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1609836280497/work
+joblib @ file:///home/conda/feedstock_root/build_artifacts/joblib_1612898609989/work
+kiwisolver @ file:///home/conda/feedstock_root/build_artifacts/kiwisolver_1604322297326/work
+matplotlib @ file:///home/conda/feedstock_root/build_artifacts/matplotlib-base_1594091695977/work
+mkl-fft==1.1.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+nose @ file:///home/conda/feedstock_root/build_artifacts/nose_1602434998960/work
+numpy==1.18.1
+olefile==0.46
+opencv-python==4.6.0.66
+pandas @ file:///home/conda/feedstock_root/build_artifacts/pandas_1592421991297/work
+Pillow==7.1.2
+pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1593275161868/work
+pyOpenSSL @ file:///home/conda/feedstock_root/build_artifacts/pyopenssl_1608055815057/work
+pyparsing==2.4.7
+PySocks @ file:///home/conda/feedstock_root/build_artifacts/pysocks_1610291444829/work
+python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/python-dateutil_1626286286081/work
+pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1612179539967/work
+requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1626393743643/work
+scikit-learn @ file:///home/conda/feedstock_root/build_artifacts/scikit-learn_1589920855303/work
+scipy==1.2.1
+shortuuid==1.0.9
+six==1.15.0
+threadpoolctl @ file:///home/conda/feedstock_root/build_artifacts/threadpoolctl_1626092076920/work
+torch==1.5.0
+torchvision==0.6.0a0+82fd1c8
+tornado @ file:///home/conda/feedstock_root/build_artifacts/tornado_1610094704591/work
+tqdm @ file:///home/conda/feedstock_root/build_artifacts/tqdm_1625664838498/work
+urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1624634538755/work
+wfdb @ file:///home/conda/feedstock_root/build_artifacts/wfdb_1622027879447/work
