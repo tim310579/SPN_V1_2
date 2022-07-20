@@ -4,13 +4,19 @@
 2. `./get_data.sh` (產生ECG-data中的ICBEB/PTBXL兩個dataset, 並解壓縮模型)
 
 ```
-Production  －－－－－－模型目錄
+Production  - - - - - -模型目錄
   │
-  ├─CNNLSTM  －－－－－－SPN-V2 backbone模型
-  │  │─ICBEB  - - - - - -
-  │  └─PTBXL  －－－－－－
+  ├─CNNLSTM  - - - - - -SPN-V2 backbone模型
+  │  │─ICBEB  - - - - - - Dataset1 backbone模型
+  │  └─PTBXL  - - - - - - Dataset2 backbone模型
   │
   ├─models  －－－－－－说明文档
+  │  |─KGEVO
+  |  |  |─ICBEB
+  |  |  └─PTBXL
+  |  └─SPN_V1
+  |  |  |─ICBEB
+  |  |  └─PTBXL
   │
   ├─state  －－－－－－配置文件
   │
