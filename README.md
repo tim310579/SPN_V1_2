@@ -10,13 +10,13 @@ Production  - - - - - -模型目錄
   │  │─ICBEB  - - - - - - Dataset1 backbone模型
   │  └─PTBXL  - - - - - - Dataset2 backbone模型
   │
-  ├─models  －－－－－－说明文档
+  ├─models  －－－－－－最終模型
   │  |─KGEVO
-  |  |  |─ICBEB
-  |  |  └─PTBXL
+  |  |  |─ICBEB  －－－－－－ Dataset1 KGEVO 最終模型
+  |  |  └─PTBXL  －－－－－－ Dataset2 KGEVO 最終模型
   |  └─SPN_V1
-  |  |  |─ICBEB
-  |  |  └─PTBXL
+  |  |  |─ICBEB  －－－－－－ Dataset1 SPN 最終模型
+  |  |  └─PTBXL  －－－－－－ Dataset2 SPN 最終模型
   │
   ├─state  －－－－－－配置文件
   │
