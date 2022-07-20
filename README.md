@@ -8,6 +8,7 @@
 5. `python3 SPN_Online_Infernece.py ICBEB`
 6. `python3 SPN_Online_Infernece.py PTBXL`
 
+```
 dirTree  －－－－－－根目录
   │
   ├─lib  －－－－－－相关函数目录
@@ -19,3 +20,4 @@ dirTree  －－－－－－根目录
   ├─conf.js  －－－－－－配置文件
   │
   └─tree.js  －－－－－－入口文件
+```
