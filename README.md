@@ -7,18 +7,21 @@
 Production  - - - - - -模型目錄
   │
   ├─CNNLSTM  - - - - - -SPN-V2 backbone模型
-  │  │─ICBEB─1─pretrained.pt
-  │  └─PTBXL  - 1 - pretrained.pt
+  │  │─ICBEB ─ 1 ─ pretrained.pt
+  │  └─PTBXL ─ 1 ─ pretrained.pt
   │
   ├─models  －－－－－－最終模型
   │  |─KGEVO
-  |  |  |─ICBEB  －－－－－－ Dataset1 KGEVO 最終模型
-  |  |  └─PTBXL  －－－－－－ Dataset2 KGEVO 最終模型
+  |  |  |─ICBEB ─ 1 ─ model.pkl
+  |  |  └─PTBXL ─ 1 ─ model.pkl
   |  └─SPN_V1
-  |  |  |─ICBEB  －－－－－－ Dataset1 SPN 最終模型
-  |  |  └─PTBXL  －－－－－－ Dataset2 SPN 最終模型
+  |     |─ICBEB ─ 1 ─ best-model.pt
+  |     └─PTBXL ─ 1 ─ model19.pt
   │
-  ├─state  －－－－－－配置文件
+  ├─state  －－－－－－SPN-V2 state
+  │  │─CNNLSTM ─ ICBEB ─ 1 ─ best-model.pt
+  |  └─CNNLSTM-500 ─ PTBXL ─ 1 ─ model19.pt
+  │  │
   │
   └─weights  －－－－－－入口文件
 ```
