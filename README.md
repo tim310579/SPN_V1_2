@@ -19,11 +19,13 @@ Production  - - - - - -模型目錄
   |     └─PTBXL ─ 1 ─ model19.pt
   │
   ├─state  －－－－－－SPN-V2 state
-  │  │─CNNLSTM ─ ICBEB ─ 1 ─ best-model.pt
-  |  └─CNNLSTM-500 ─ PTBXL ─ 1 ─ model19.pt
-  │  │
+  │  │─CNNLSTM ─     ICBEB ─ 1 ─ state.pkl
+  |  └─CNNLSTM-500 ─ PTBXL ─ 1 ─ state.pkl
+  │  
   │
-  └─weights  －－－－－－入口文件
+  └─weights  －－－－－－SPN-V2 模型末端參數
+  │  │─ICBEB ─ 1 ─ weight.pkl
+  |  └─PTBXL ─ 1 ─ weight.pkl
 ```
 
 3. `pip3 install -r requirements.txt` (安裝環境套件)
