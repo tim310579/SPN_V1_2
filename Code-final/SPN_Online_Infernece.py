@@ -303,9 +303,9 @@ print(model_path)
 
 if use_dataset_name=="PTBXL":
     #print('model19.pt')
-    model.load_state_dict(torch.load(model_path+"/model19.pt"))
+    model.load_state_dict(torch.load(model_path+"/model.pt"))
 else:
-    model.load_state_dict(torch.load(model_path+"/best-model.pt"))
+    model.load_state_dict(torch.load(model_path+"/model.pt"))
     
 model.cuda()
 
