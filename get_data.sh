@@ -31,4 +31,4 @@ rm -r ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.1
 rm ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.1.zip
 cd ..
 
-unzip Production.zip
+#unzip Production.zip
