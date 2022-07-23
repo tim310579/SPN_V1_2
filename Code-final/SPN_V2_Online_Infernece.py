@@ -157,61 +157,6 @@ def feature_extractor(model, test_X, hidden):
     return state, hidden
 
 
-def show_vis(vis_idx, rpeak_list, pred_position, probs, flag, true, pred,diff):
-
-    show_position = []
-    show_position.append(0)
-    for position in rpeak_list[:pred_position+1]:
-        show_position.append(position)
-    show_position.append(position+250)
-
-    show_probs = []
-    show_probs.append(0)
-    for prob in probs.reshape(1,-1)[0]:
-        show_probs.append(prob)
-    show_probs.append(0)
-    show_probs = np.array(show_probs)
-
-
-    leads = ["I","II","III","aVR","aVL","aVF","V1","V2","V3","V4","V5","V6"]
-
-    fig, axes = plt.subplots(nrows=12, ncols=1,figsize=(20, 15))
-
-    plt.xticks(fontsize=28)
-    for i in range(12):
-        plt.margins(0,0)
-        plot_data = np.transpose(raw_testing_data[vis_idx])[i]
-        min_val = np.min(plot_data)
-        max_val = np.max(plot_data)
-        
-        plot_data = (plot_data-plot_data.min())/(plot_data.max()-plot_data.min())
-            
-        min_val = np.min(plot_data)
-        max_val = np.max(plot_data)
-        
-        a_obs = pd.DataFrame(plot_data)
-        
-        ax = a_obs.plot(ax=axes[i])
-
-        if(math.isnan(min_val) is False and math.isnan(max_val) is False):
-            plt.ylim([min_val, max_val])
-        ax.set_yticks([])
-        y_axis = ax.axes.get_yaxis()
-        x_axis = ax.axes.get_xaxis()
-        if (i < 11): x_axis.set_visible(False)
-        y_axis.set_label_text(leads[i], fontsize=28)
-        ax.margins(x=0)
-        ax.get_legend().remove()
-
-        if(flag):
-            ax.fill_between(x=show_position, y1= min_val, y2=show_probs*(max_val-min_val), facecolor='green', alpha=0.5)
-        else:
-            ax.fill_between(x=show_position, y1= min_val, y2=show_probs*(max_val-min_val), facecolor='red', alpha=0.5)
-                    
-    fig.savefig("/home/waue0920/hugo/eTSC/visual/ptbxl/"+str(vis_idx)+"_G_"+true+"_P_"+pred+"_D_"+str(diff)+".png", bbox_inches='tight')
-
-    plt.close(fig) 
-
 if __name__ == "__main__":
 
     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
