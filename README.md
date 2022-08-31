@@ -33,6 +33,11 @@ Production  - - - - - -模型目錄
 
 3. `pip3 install -r requirements.txt` (安裝環境套件)
 4. `cd Code-final` 
+
+
+Acknowledgement
+---
+This project was supported by Ministry of Science and Technology, Taiwan, under grant no. MOST 110-2634-FA49-002.
 5. `python3 SPN_Online_Infernece.py ICBEB` (SPN執行第一個dataset)
 6. `python3 SPN_Online_Infernece.py PTBXL` (SPN執行第二個dataset)
 7. `python3 SPN_V2_Online_Infernece.py ICBEB` (SPN_V2執行第一個dataset)
